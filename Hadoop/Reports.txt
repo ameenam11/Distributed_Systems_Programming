@@ -1,0 +1,102 @@
+------------------------------------------REPORTS---------------------------------------------- 
+
+- The number of key-value pairs that were sent from the mappers to the reducers and their size with&without local aggregation.: 
+(1) The number with local aggregation : 
+    - 88,020,896 + 87,056,358 + 367,762 = 175,445,016
+(2) Their size with local aggregation (bytes) : 
+    - 320,202,422 + 224,632,031 + 12,779,534 = 557,613,987 (557 MB)
+(3) The number without local aggregation : 
+    - 159,603,323 + 87,056,358 + 367,762 = 247,027,443
+(4) Their size without local aggregation (bytes) : 
+    - 492,580,050 + 224,632,031 + 12,779,534 = 729,991,615 (729 MB)
+
+-----(Scalability report)-----
+
+(1) The time of the running for two different numbers of mappers:
+   - With local aggregation using 6 instances: 27 minutes
+   - With local aggregation using 4 instances: 39 minutes
+
+(2) The time of the running for two different input sizes:
+   - With local aggregation using 6 instances on all Google 3 grams: 27 minutes
+   - With local aggregation using 6 instances on a 1 MB file: 7 minutes
+
+-----(10 'interesting' word pairs)----- 
+ (1) The words : 
+   - "ליל"
+   - "לימוד"
+   - "לך"
+   - "ליצור"
+   - "לכבוד"
+   - "לימודי"
+   - "ללמוד"
+   - "לישראל"
+   - "לירושלים"
+   - "לכם"
+
+
+ (2) show their top-5 next words : 
+   - "ליל":
+     1. יציאת מצרים (0.5267)
+     2. תשעה באב (0.3887)
+     3. הסדר הראשון (0.0201)
+     4. יום ראשון (0.0116)
+     5. שבועות וליל (0.0013)
+   - "לימוד":
+     1. הספרות העברית (0.9149)
+     2. המוסר בהתפעלות (0.0115)
+     3. התורה שבכתב (0.0090)
+     4. פרשת השבוע (0.0208)
+     5. בישיבת מיר (0.0180)
+   - "לך":
+     1. דרישת שלום (0.8983)
+     2. לפוקה ולמכשול (0.9042)
+     3. ועבוד עבודה (0.4158)
+     4. בפעם הראשונה (0.3539)
+     5. להוצאות הדרך (0.2998)
+   - "ליצור":
+     1. מכנה משותף (0.3668)
+     2. מציאות חדשה (0.0935)
+     3. נשק גרעיני (0.0915)
+     4. חזית אחידה (0.0364)
+     5. קרן מיוחדת (0.0121)
+   - "לכבוד":
+     1. ידידי היקר (0.1325)
+     2. קדושת היום (0.1177)
+     3. יום ההולדת (0.0016)
+     4. האי גברא (0.0163)
+     5. קבלת פנים (0.0259)
+  - "לימודי":
+     1. תואר ראשון (0.0171)
+     2. המזרח התיכון (0.1999)
+     3. קודש וחול (0.0080)
+     4. בבתי הספר (0.0954)
+     5. בבית הספר (0.0954)
+   - "ללמוד":
+     1. בכוחות עצמו (0.3387)
+     2. גזירה שווה (0.0620)
+     3. תורה אלא (0.0155)
+     4. רפואה באוניברסיטה (0.0188)
+     5. פרק משניות (0.0022)
+   - "לישראל":
+     1. כפלים כיוצאי (0.8620)
+     2. דברים קשים (0.0158)
+     3. שבעת ימי (0.4074)
+     4. כדי שלא (0.2475)
+     5. מעלה גדולה (0.0101)
+   - "לירושלים":
+     1. ולציון קנאה (0.5342)
+     2. נאסרו הבמות (0.2722)
+     3. שלחו לפניהם (0.0540)
+     4. תושב ולערי (0.0349)
+     5. שלחו לפניהם (0.0539)
+   - "לכם":
+     1. דרישת שלום (0.8983)
+     2. לעסוק בתורה (0.4376)
+     3. חזות הכל (0.4263)
+     4. יראי שמי (0.2238)
+     5. הקדוש ברוך (0.2128)
+
+     
+ (3) Judge whether the system got to a reasonable decision for these cases :
+   - The predictions appear mostly reasonable, aligning with common contextual use of trigrams.
+

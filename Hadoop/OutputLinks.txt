@@ -1,0 +1,8 @@
+* The output/ link to the output ditectory on s3 :
+---------------------------link to the output ditectory on s3-------------------------------
+
+  - With local aggregation:
+    - s3://ameen-raya-project/withCombiner6
+    - s3://ameen-raya-project/withCombiner4
+  - Without local aggregation:
+    - s3://ameen-raya-project/withoutCombiner6
